@@ -1,6 +1,10 @@
 ## StackGAN &mdash; Simple TensorFlow Implementation [[Paper]](https://arxiv.org/abs/1612.03242)
 ### : Text to Photo-realistic Image Synthesis with Stacked Generative Adversarial Networks
 
+<div align="center">
+  <img src="./assets/teaser.png">
+</div>
+
 ## Dataset
 ### char-CNN-RNN text embedding
 * [birds](https://drive.google.com/open?id=0B3y_msrWZaXLT1BZdVdycDY5TEE)
@@ -42,7 +46,9 @@ python main.py --dataset birds --phase test
 ```
 
 ## Results
-
+<div align="center">
+  <img src="./assets/result.png">
+</div>
 
 ## Author
 [Junho Kim](http://bit.ly/jhkim_ai)
