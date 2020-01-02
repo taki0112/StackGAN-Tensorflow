@@ -419,7 +419,7 @@ class StackGAN():
                     merge_images = np.concatenate([merge_real_images, merge_fake_images], axis=0)
 
                     save_images(merge_images, [1, 2],
-                                './{}/merge_{:07d}.jpg'.format(self.sample_dir, idx + 1))
+                                './{}/merge_stage{}_{:07d}.jpg'.format(self.sample_dir, stage, idx + 1))
 
 
                 if np.mod(counter - 1, self.save_freq) == 0:

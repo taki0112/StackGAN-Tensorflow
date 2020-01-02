@@ -6,12 +6,12 @@ from utils import pytorch_kaiming_weight_factor
 # Initialization
 ##################################################################################
 
-factor, mode, uniform = pytorch_kaiming_weight_factor(a=0.0, uniform=False)
-weight_init = tf_contrib.layers.variance_scaling_initializer(factor=factor, mode=mode, uniform=uniform)
-# weight_init = tf.random_normal_initializer(mean=0.0, stddev=0.02)
+# factor, mode, uniform = pytorch_kaiming_weight_factor(a=0.0, uniform=False)
+# weight_init = tf_contrib.layers.variance_scaling_initializer(factor=factor, mode=mode, uniform=uniform)
+weight_init = tf.random_normal_initializer(mean=0.0, stddev=0.02)
 
-weight_regularizer = tf.contrib.layers.l2_regularizer(0.0001)
-weight_regularizer_fully = tf.contrib.layers.l2_regularizer(0.0001)
+weight_regularizer = None
+weight_regularizer_fully = None
 
 ##################################################################################
 # Layer
