@@ -368,19 +368,24 @@ class StackGAN():
         # restore check-point if it exits
         could_load, checkpoint_counter = self.load(self.checkpoint_dir)
         if could_load:
-            start_batch_id = checkpoint_counter
             counter = checkpoint_counter
+            init_stage = counter // self.iteration
+            if init_stage == 1 :
+                start_batch_id = checkpoint_counter - self.iteration
+            else :
+                start_batch_id = checkpoint_counter
             print(" [*] Load SUCCESS")
 
         else:
             start_batch_id = 0
             counter = 1
+            init_stage = 0
             print(" [!] Load failed...")
 
         # loop for epoch
         start_time = time.time()
 
-        for stage in range(2) :
+        for stage in range(init_stage, 2) :
             lr = self.init_lr
             for idx in range(start_batch_id, self.iteration):
 
