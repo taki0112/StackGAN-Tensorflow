@@ -32,7 +32,6 @@
        ├── text
            ├── char-CNN-RNN-embeddings.pickle
            ├── filenames.pickle
-           ├── ...
 ```
 
 ### Train
